@@ -1,52 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center; /* Centered text */
+}
+h1 {
+    color: #333; /* Dark gray color */
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav button {
-    margin: 0.5em;
-    padding: 0.5em 1em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-section {
-    padding: 1em;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.5em 0;
-    padding: 0.5em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 0.3em 0.6em;
-    border-radius: 3px;
-    cursor: pointer;
-}
 

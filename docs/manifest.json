@@ -1,0 +1,16 @@
+{
+    "short_name": "ACA Convention",
+    "name": "ACA Clogging Convention",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB"
+}
+
