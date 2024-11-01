@@ -1,11 +1,17 @@
-body {
-    background-color: #da9b14; /* Light orange background */
-    font-family: Arial, sans-serif; /* Font style */
-    text-align: center; /* Centered text */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #da9b14; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Spacing above the button */
 }
-h1 {
-    color: #333; /* Dark gray color */
+
+.button:hover {
+    background-color: #c88b12; /* Darker on hover */
 }
+
 
 
 
