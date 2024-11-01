@@ -1,220 +1,85 @@
-/* Import Google Font for modern typography */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* CSS Variables for consistent theming */
-:root {
-    --primary-color: #147dda; /* Primary Blue */
-    --secondary-color: #ffffff; /* White */
-    --accent-color: #da9b14; /* Accent Orange */
-    --text-color: #333333; /* Dark Gray */
-    --background-color: #f4f4f9; /* Light Gray Background */
-    --font-family: 'Roboto', sans-serif; /* Modern Font */
-    --border-radius: 8px; /* Rounded Corners */
-    --transition-speed: 0.3s; /* Smooth Transitions */
-}
-
-/* Global Styles */
+/* General Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    background-color: var(--background-color);
-    font-family: var(--font-family);
-    color: var(--text-color);
-    line-height: 1.6;
+    background-color: #f4f6f9; /* Light gray background */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Sleek font */
+    color: #333; /* Dark gray text color */
+    text-align: center;
     padding: 20px;
 }
 
-/* Header Styles */
-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 20px 0;
-    text-align: center;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+/* Header Styling */
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+/* Paragraph Styling */
+p {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
-/* Navigation Styles */
-nav {
-    margin: 20px 0;
-    text-align: center;
-}
-
-nav a {
-    color: var(--primary-color);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color var(--transition-speed);
-}
-
-nav a:hover {
-    color: var(--accent-color);
-}
-
-/* Button Styles */
+/* Button Styling */
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    font-weight: 500;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
-    cursor: pointer;
+    padding: 12px 24px;
+    background-color: #147dda; /* Primary button color */
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    border-radius: 25px; /* Smooth rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin-top: 20px; /* Space above the button */
 }
 
+/* Button Hover Effect */
 .button:hover {
-    background-color: darken(var(--accent-color), 10%);
-    transform: translateY(-2px);
+    background-color: #0f6bb8; /* Slightly darker on hover */
 }
 
-/* Table Styles */
+/* Table Styling */
 table {
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius);
-    overflow: hidden;
+    background-color: #fff; /* White background for table */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Smooth corners */
+    overflow: hidden; /* Prevents corner cutoff */
+}
+
+thead {
+    background-color: #147dda; /* Primary color for header */
+    color: #ffffff; /* White text in header */
 }
 
 th, td {
     padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Light border between rows */
 }
 
-th {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: 700;
+tbody tr:nth-child(even) {
+    background-color: #f9fbfd; /* Subtle stripe effect */
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+a {
+    color: #147dda;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-tr:hover {
-    background-color: #f1f1f1;
+a:hover {
+    text-decoration: underline;
 }
-
-/* List Styles */
-ul {
-    list-style: none;
-    margin: 20px 0;
-    padding: 0;
-}
-
-ul li {
-    background-color: var(--secondary-color);
-    margin-bottom: 10px;
-    padding: 15px;
-    border-left: 5px solid var(--accent-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-ul li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Form Styles */
-form {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-form input[type="text"],
-form select,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    transition: border-color var(--transition-speed);
-}
-
-form input[type="text"]:focus,
-form select:focus,
-form textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-form button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
-}
-
-form button:hover {
-    background-color: darken(var(--primary-color), 10%);
-    transform: translateY(-2px);
-}
-
-/* Section Styles */
-section {
-    margin-bottom: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    table, th, td {
-        font-size: 0.9rem;
-    }
-
-    .button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-    form {
-        padding: 15px;
-    }
-}
-
-
-
-
-
