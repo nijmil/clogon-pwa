@@ -1,7 +1,7 @@
 // Workshop Data
 const workshopsByDay = {
     day1: [
-        { id: 1, title: "Social Dancing", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall ONE" },
+        { id: 1, title: "SOCIAL DANCING", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
         
     ],
     day2: [
@@ -34,6 +34,7 @@ const workshopsByDay = {
         { id: 21, title: "SHAKE SHAKE", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Christine Collins", hall: "Hall 1" },
         { id: 22, title: "A BAR SONG", time: "10:45-11:25 am", level: "Basic +", instructor: "Cheryl Holland", hall: "Hall 2" },
         { id: 23, title: "ELECTRIC ENERGY", time: "11:30-12:10 am", level: "Easy Intermediate", instructor: "Nev Flegg", hall: "Hall 1" },
+        { id: 24, title: "SOCIAL DANCING", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
     ]
 };
 
@@ -59,11 +60,11 @@ function showDay(dayId) {
             workshopDiv.className = 'workshop';
             workshopDiv.innerHTML = `
                 <h3 class="centered">${workshop.title}</h3>
-                <p class="centered">${workshop.time}</p>
-                <p class="centered">${workshop.level}</p>
-                <p class="centered">${workshop.instructor}</p>
-                <p class="centered">${workshop.hall}</p>
-                <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
+                <p class="centered">Time: ${workshop.time}</p>
+                <p class="centered">Level: ${workshop.level}</p>
+                <p class="centered">Instructor: ${workshop.instructor}</p>
+                <p class="centered">Hall: ${workshop.hall}</p>
+                <button onclick="addToProgram(${workshop.id}, '${dayId}')">Add to My Program</button>
             `;
             workshopsDiv.appendChild(workshopDiv);
         });
@@ -72,22 +73,18 @@ function showDay(dayId) {
     }
 }
 
-
 // Add workshop to localStorage
-function addToProgram(id) {
+function addToProgram(id, dayId) {
     const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
-    const workshop = Object.values(workshopsByDay)
-                           .flat()
-                           .find(w => w.id === id);
-    if (!myProgram.some(w => w.id === workshop.id)) {
+    const workshop = workshopsByDay[dayId].find(w => w.id === id);
+
+    if (workshop && !myProgram.some(w => w.id === workshop.id)) {
         myProgram.push(workshop);
         localStorage.setItem('myProgram', JSON.stringify(myProgram));
         alert(`${workshop.title} has been added to your program.`);
-    } else {
+    } else if (workshop) {
         alert(`${workshop.title} is already in your program.`);
+    } else {
+        alert("Workshop not found.");
     }
 }
-
-
-
-
