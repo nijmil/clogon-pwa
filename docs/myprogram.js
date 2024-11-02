@@ -14,10 +14,10 @@ function displayMyProgram() {
             workshopDiv.innerHTML = `
                 <h2>${workshop.day}</h2>
                 <h3>${workshop.title}</h3>
-                <p>Time: ${workshop.time}</p>
-                <p>Level: ${workshop.level}</p>
-                <p>Instructor: ${workshop.instructor}</p>
-                <p>Hall: ${workshop.hall}</p>
+                <p>${workshop.time}</p>
+                <p>${workshop.level}</p>
+                <p>${workshop.instructor}</p>
+                <p>${workshop.hall}</p>
                 <button onclick="removeFromProgram(${workshop.id})">Remove from My Program</button>
             `;
             myProgramList.appendChild(workshopDiv);
