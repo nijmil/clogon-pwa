@@ -129,3 +129,23 @@ button:hover, .button-style:hover {
     max-width: 400px;
     margin: 0 auto 20px; /* Center the container and add spacing below */
 }
+/* Style for the back-to-home button at the bottom of the program list */
+.back-button {
+    display: block;
+    width: 100%; /* Full-width button */
+    max-width: 115px; /* Matches other buttons */
+    margin: 20px auto; /* Centers the button and adds space above */
+    padding: 12px;
+    background-color: #f3d7cc;
+    color: #ce3513;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #f6b095;
+}
