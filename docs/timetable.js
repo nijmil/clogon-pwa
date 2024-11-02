@@ -1,8 +1,8 @@
 // Sample workshop data
 const workshopsByDay = {
     day1: [
-        { id: 1, title: "Check In", time: "5:00 PM", level: "All Levels", instructor: "Jane Doe", hall: "Hall A" },
-        { id: 2, title: "Social Dancing", time: "7:30 PM", level: "Beginner", instructor: "John Smith", hall: "Hall B" },
+        { id: 1, title: "Check In", time: "5:00 PM", level: "All Levels" },
+        { id: 2, title: "Social Dancing", time: "7:30 PM", level: "Beginner", hall: "Hall One" },
     ],
     day2: [
         { id: 3, title: "Intermediate Techniques", time: "10:00 AM", level: "Intermediate", instructor: "Alice Johnson", hall: "Hall C" },
