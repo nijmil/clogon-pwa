@@ -1,16 +1,16 @@
 // Sample workshops data categorized by days
 const workshops = {
     day1: [
-        { id: 1, title: "Workshop A", time: "8:00-9:00 am", level: "Beginner", instructor: "Alice", hall: "Hall 1" },
-        { id: 2, title: "Workshop B", time: "9:30-10:30 am", level: "Intermediate", instructor: "Bob", hall: "Hall 2" },
+        { id: 1, day: "FRI", title: "Workshop A", time: "8:00-9:00 am", level: "Beginner", instructor: "Alice", hall: "Hall 1" },
+        { id: 2, day: "FRI", title: "Workshop B", time: "9:30-10:30 am", level: "Intermediate", instructor: "Bob", hall: "Hall 2" },
     ],
     day2: [
-        { id: 3, title: "Workshop C", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice", hall: "Hall 1" },
-        { id: 4, title: "Workshop D", time: "10:00-11:00 am", level: "Advanced", instructor: "Dave", hall: "Hall 2" },
+        { id: 3, day: "SAT", title: "Workshop C", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice", hall: "Hall 1" },
+        { id: 4, day: "SAT", title: "Workshop D", time: "10:00-11:00 am", level: "Advanced", instructor: "Dave", hall: "Hall 2" },
     ],
     day3: [
-        { id: 5, title: "Workshop E", time: "9:00-10:00 am", level: "Beginner", instructor: "Eva", hall: "Hall 1" },
-        { id: 6, title: "Workshop F", time: "11:00-12:00 pm", level: "Intermediate", instructor: "Frank", hall: "Hall 2" },
+        { id: 5, day: "SUN", title: "Workshop E", time: "9:00-10:00 am", level: "Beginner", instructor: "Eva", hall: "Hall 1" },
+        { id: 6, day: "SUN", title: "Workshop F", time: "11:00-12:00 pm", level: "Intermediate", instructor: "Frank", hall: "Hall 2" },
     ],
 };
 
@@ -23,6 +23,7 @@ function loadWorkshops(day) {
         const workshopDiv = document.createElement('div');
         workshopDiv.className = 'workshop';
         workshopDiv.innerHTML = `
+            <h3>${workshop.day}</h3>
             <h3>${workshop.title}</h3>
             <p>${workshop.time}</p>
             <p>${workshop.level}</p>
