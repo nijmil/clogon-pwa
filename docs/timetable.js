@@ -39,6 +39,7 @@ const workshopsByDay = {
     ]
 };
 
+// Function to display workshops for a selected day
 function showDay(dayId) {
     // Hide all day contents
     document.querySelectorAll('.day-content').forEach(content => {
@@ -72,12 +73,12 @@ function showDay(dayId) {
     }
 }
 
-
 // Add workshop to localStorage
 function addToProgram(workshopString) {
-    const workshop = JSON.parse(decodeURIComponent(workshopString));
+    const workshop = JSON.parse(workshopString);
     const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
     
+    // Check if the workshop is already in the user's program
     if (!myProgram.some(w => w.id === workshop.id)) {
         myProgram.push(workshop);
         localStorage.setItem('myProgram', JSON.stringify(myProgram));
@@ -86,3 +87,14 @@ function addToProgram(workshopString) {
         alert(`${workshop.title} is already in your program.`);
     }
 }
+
+// Call displayMyProgram on page load
+window.onload = function() {
+    showDay('day1');
+    
+    // Attach event listeners to buttons for day navigation
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => showDay(button.getAttribute('data-day')));
+    });
+};
