@@ -45,7 +45,6 @@ button {
 }
 
 
-
 /* Hover effect for buttons */
 button:hover {
     background-color: #f6b095;
@@ -89,4 +88,10 @@ button:hover {
     margin-bottom: 15px;
     color: #000; /* Change text color to black for better contrast */
     text-align: center; /* Center the text inside the workshop container */
+}
+
+.tab-button.active {
+    background-color: #f6b095; /* Example color */
+    color: #ce3513;
+    font-weight: bold;
 }

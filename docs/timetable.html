@@ -7,12 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="timetable.js"></script>
+    <script>
+        // Function to display a specific day's timetable
+        function showDay(dayId) {
+            const days = document.querySelectorAll('.day-content');
+            const buttons = document.querySelectorAll('.tab-button');
+
+            // Hide all day contents and remove active class from all buttons
+            days.forEach(day => day.style.display = 'none');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Show the selected day and set the button to active
+            document.getElementById(dayId).style.display = 'block';
+            document.querySelector(`button[onclick="showDay('${dayId}')"]`).classList.add('active');
+        }
+
+        // Display the first day's timetable by default when the page loads
+        window.onload = function() {
+            showDay('day1');
+        };
+    </script>
 </head>
 <body>
     <div class="container">
-        <!-- Removed the header -->
-        <!-- <h2>Weekend Program</h2> -->
-        
         <!-- Tabs for each day -->
         <div class="tabs">
             <button class="tab-button" onclick="showDay('day1')">FRI 8 Nov</button>
@@ -33,7 +50,3 @@
     </div>
 </body>
 </html>
-
-
-
-
