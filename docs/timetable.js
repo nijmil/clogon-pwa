@@ -1,8 +1,8 @@
 // Sample workshop data
 const workshopsByDay = {
     day1: [
-        { id: 1, title: "Intro to Clogging", time: "10:00 AM" },
-        { id: 2, title: "Beginner Workshop", time: "11:30 AM" },
+        { id: 1, title: "Check In", time: "5:00 PM" },
+        { id: 2, title: "Social Dancing", time: "7:30 PM" },
     ],
     day2: [
         { id: 3, title: "Intermediate Techniques", time: "10:00 AM" },
