@@ -44,7 +44,7 @@ function displayMyProgram() {
                 <p>Level: ${workshop.level}</p>
                 <p>Instructor: ${workshop.instructor}</p>
                 <p>Hall: ${workshop.hall}</p>
-                <button onclick="removeFromProgram(${workshop.id})">Remove from My Program</button>
+                <button onclick="removeFromProgram(${workshop.id})">Remove</button>
             `;
             myProgramList.appendChild(workshopDiv);
         });
