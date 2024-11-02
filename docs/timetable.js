@@ -39,7 +39,6 @@ const workshopsByDay = {
     ]
 };
 
-// Function to display workshops for a selected day
 function showDay(dayId) {
     // Hide all day contents
     document.querySelectorAll('.day-content').forEach(content => {
@@ -64,8 +63,7 @@ function showDay(dayId) {
                 <p class="centered">${workshop.level}</p>
                 <p class="centered">${workshop.instructor}</p>
                 <p class="centered">${workshop.hall}</p>
-                <button onclick="addToProgram('${encodeURIComponent(JSON.stringify({...workshop, day: dayId}))}')">Add to My Program</button>
-
+                <button onclick="addToProgram('${JSON.stringify({...workshop, day: dayId})}')">Add to My Program</button>
             `;
             workshopsDiv.appendChild(workshopDiv);
         });
@@ -73,6 +71,7 @@ function showDay(dayId) {
         workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>';
     }
 }
+
 
 // Add workshop to localStorage
 function addToProgram(workshopString) {
