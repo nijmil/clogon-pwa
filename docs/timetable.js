@@ -26,8 +26,14 @@ const workshopsByDay = {
         { id: 20, title: "DINNER", time: "6:00 pm", level: "Super Easy", instructor: "N/A", hall: "Dining Hall" },
     ],
     day3: [
-        { id: 21, title: "Dance Routine Workshop", time: "10:00 AM", level: "Intermediate", instructor: "Emily Davis", hall: "Hall E" },
-        { id: 22, title: "Showcase Performance", time: "2:00 PM", level: "All Levels", instructor: "Michael Wilson", hall: "Hall F" },
+        { id: 21, title: "TOGETHER", time: "9:00-9:40 am", level: "Intermediate Plus", instructor: "Nathan Ballard", hall: "Hall ONE" },
+        { id: 22, title: "VINCERO", time: "9:00-9:40 am", level: "Easy Intermediate", instructor: "Lindsay Rogers", hall: "Hall TWO" },
+        { id: 23, title: "POUR ME A DRINK", time: "9:50-10:30 am", level: "Intermediate", instructor: "Toni Trott", hall: "Hall ONE" },
+        { id: 24, title: "BACK TO LIFE", time: "9:50-10:30 am", level: "Advanced", instructor: "Peter Wee", hall: "Hall TWO" },
+        { id: 25, title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
+        { id: 21, title: "SHAKE SHAKE", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Christine Collins", hall: "Hall ONE" },
+        { id: 22, title: "A BAR SONG", time: "10:45-11:25 am", level: "Basic +", instructor: "Cheryl Holland", hall: "Hall TWO" },
+        { id: 23, title: "ELECTRIC ENERGY", time: "11:30-12:10 am", level: "Easy Intermediate", instructor: "Nev Flegg", hall: "Hall ONE" },
     ]
 };
 
