@@ -53,6 +53,8 @@ function addToProgram(workshopId) {
     const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
     const workshop = Object.values(workshops).flat().find(w => w.id === workshopId);
 
+    console.log("Retrieved workshop:", workshop); // Log the retrieved workshop
+
     // Check if the workshop is already in the user's program
     if (!myProgram.some(w => w.id === workshopId)) {
         // Add the workshop object including 'day' to myProgram
