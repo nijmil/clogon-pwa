@@ -63,7 +63,7 @@ function showDay(dayId) {
                 <p class="centered">${workshop.level}</p>
                 <p class="centered">${workshop.instructor}</p>
                 <p class="centered">${workshop.hall}</p>
-                <button onclick="addToProgram(${JSON.stringify({...workshop, day: dayId})})">Add to My Program</button>
+                <button onclick="addToProgram(${encodeURIComponent(JSON.stringify({...workshop, day: dayId}))})">Add to My Program</button>
             `;
             workshopsDiv.appendChild(workshopDiv);
         });
@@ -73,7 +73,8 @@ function showDay(dayId) {
 }
 
 // Add workshop to localStorage
-function addToProgram(workshop) {
+function addToProgram(workshopString) {
+    const workshop = JSON.parse(decodeURIComponent(workshopString));
     const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
     
     if (!myProgram.some(w => w.id === workshop.id)) {
