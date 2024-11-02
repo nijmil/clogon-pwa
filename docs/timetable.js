@@ -65,37 +65,3 @@ function addToProgram(workshopId) {
     }
 }
 
-// Display the user's program
-function displayMyProgram() {
-    const myProgramDiv = document.getElementById('myProgram');
-    const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
-    
-    myProgramDiv.innerHTML = ''; // Clear previous content
-
-    if (myProgram.length === 0) {
-        myProgramDiv.innerHTML = '<p>No workshops added to your program.</p>';
-    } else {
-        myProgram.forEach(workshop => {
-            const workshopDiv = document.createElement('div');
-            workshopDiv.className = 'workshop';
-            workshopDiv.innerHTML = `
-                <h3>${workshop.title}</h3>
-                <p>${workshop.time}</p>
-                <p>${workshop.level}</p>
-                <p>${workshop.instructor}</p>
-                <p>${workshop.hall}</p>
-            `;
-            myProgramDiv.appendChild(workshopDiv);
-        });
-    }
-}
-
-// Initialize the app on page load
-window.onload = function() {
-    showDay('day1'); // Show the first day's workshops on load
-    const buttons = document.querySelectorAll('.tab-button');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => showDay(button.getAttribute('data-day')));
-    });
-    displayMyProgram(); // Display any previously added workshops
-};
