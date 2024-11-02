@@ -1,64 +1,58 @@
-// Workshop Data
-const workshopsByDay = {
-    day1: [
-        { id: 1, title: "SOCIAL DANCING", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
-        // More workshops for day1 can go here
-    ],
-    day2: [
-        { id: 2, title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
-        { id: 3, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall 2" },
-        // More workshops for day2 can go here
-    ],
-    day3: [
-        { id: 21, title: "TOGETHER", time: "9:00-9:40 am", level: "Intermediate Plus", instructor: "Nathan Ballard", hall: "Hall 1" },
-        { id: 22, title: "VINCERO", time: "9:00-9:40 am", level: "Easy Intermediate", instructor: "Lindsay Rogers", hall: "Hall 2" },
-        // More workshops for day3 can go here
-    ]
-};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="timetable.js"></script>
+    <script>
+        // Function to display a specific day's timetable
+        function showDay(dayId) {
+            const days = document.querySelectorAll('.day-content');
+            const buttons = document.querySelectorAll('.tab-button');
 
-// Function to display workshops for a selected day
-function showDay(dayId) {
-    const workshopsDiv = document.getElementById(dayId);
-    workshopsDiv.innerHTML = ''; // Clear previous content
+            // Hide all day contents and remove active class from all buttons
+            days.forEach(day => day.style.display = 'none');
+            buttons.forEach(button => button.classList.remove('active'));
 
-    const workshops = workshopsByDay[dayId];
+            // Show the selected day and set the button to active
+            document.getElementById(dayId).style.display = 'block';
+            document.querySelector(`button[data-day="${dayId}"]`).classList.add('active');
+        }
 
-    // Check if there are workshops to display
-    if (workshops && workshops.length > 0) {
-        workshops.forEach(workshop => {
-            const workshopDiv = document.createElement('div');
-            workshopDiv.className = 'workshop';
-            workshopDiv.innerHTML = `
-                <h3 class="centered">${workshop.title}</h3>
-                <p class="centered">Time: ${workshop.time}</p>
-                <p class="centered">Level: ${workshop.level}</p>
-                <p class="centered">Instructor: ${workshop.instructor}</p>
-                <p class="centered">Hall: ${workshop.hall}</p>
-                <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
-            `;
-            workshopsDiv.appendChild(workshopDiv);
-        });
-    } else {
-        workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>'; // Handle no workshops case
-    }
-}
-
-// Add workshop to user's program in localStorage
-function addToProgram(id) {
-    const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
-    const workshop = Object.values(workshopsByDay)
-                           .flat()
-                           .find(w => w.id === id);
-    if (!myProgram.some(w => w.id === workshop.id)) {
-        myProgram.push(workshop);
-        localStorage.setItem('myProgram', JSON.stringify(myProgram));
-        alert(`${workshop.title} has been added to your program.`);
-    } else {
-        alert(`${workshop.title} is already in your program.`);
-    }
-}
-
-// Display the first day's timetable by default when the page loads
-window.onload = function() {
-    showDay('day1');
-};
+        // Display the first day's timetable by default when the page loads
+        window.onload = function() {
+            showDay('day1');
+            
+            // Attach event listeners to buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => showDay(button.getAttribute('data-day')));
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Tabs for each day -->
+        <div class="tabs">
+            <button class="tab-button" data-day="day1">FRI    8 Nov</button>
+            <button class="tab-button" data-day="day2">SAT    9 Nov</button>
+            <button class="tab-button" data-day="day3">SUN    10 Nov</button>
+        </div>
+        
+        <!-- Schedule for each day -->
+        <div id="day1" class="day-content">
+            <!-- Day 1 workshops will be loaded here by timetable.js -->
+        </div>
+        <div id="day2" class="day-content" style="display: none;">
+            <!-- Day 2 workshops will be loaded here by timetable.js -->
+        </div>
+        <div id="day3" class="day-content" style="display: none;">
+            <!-- Day 3 workshops will be loaded here by timetable.js -->
+        </div>
+    </div>
+</body>
+</html>
