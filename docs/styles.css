@@ -10,7 +10,7 @@ body {
 
 /* Logo style */
 .logo {
-    max-width: 280px; /* Adjust this to change the logo size */
+    max-width: 270px; /* Adjust this to change the logo size */
     height: auto; /* Maintains aspect ratio */
     margin: 20px auto; /* Adds space around the logo and centers it */
     display: block; /* Centers the image */
@@ -33,7 +33,7 @@ button {
     width: 100%;
     max-width: 180px;
     padding: 12px;
-    margin: 10px 0 20px; /* Adjust the bottom margin to add space below each button */
+    margin: 20px 0 10px; /* Adjust the bottom margin to add space below each button */
     background-color: #70dcdf;
     color: #ce3513;
     border: none;
