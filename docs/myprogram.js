@@ -38,7 +38,7 @@ function displayMyProgram() {
             const workshopDiv = document.createElement('div');
             workshopDiv.className = 'workshop';
             workshopDiv.innerHTML = `
-                <h2>${workshop.day}</h2>
+                <h4>${workshop.day}</h4>
                 <h3>${workshop.title}</h3>
                 <p>Time: ${workshop.time}</p>
                 <p>Level: ${workshop.level}</p>

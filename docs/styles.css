@@ -107,3 +107,7 @@ button:hover {
     text-align: left; /* Left align the text inside the info container */
 }
 
+/* styles.css */
+h1 {
+    color: #ff5733; /* Change this color to your desired color */
+}

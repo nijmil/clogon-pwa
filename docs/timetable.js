@@ -1,17 +1,42 @@
-// Sample workshops data categorized by days
-const workshops = {
+// Workshop Data
+const workshopsByDay = {
     day1: [
-        { id: 1, day: "FRI", title: "Workshop A", time: "8:00-9:00 am", level: "Beginner", instructor: "Alice", hall: "Hall 1" },
-        { id: 2, day: "FRI", title: "Workshop B", time: "9:30-10:30 am", level: "Intermediate", instructor: "Bob", hall: "Hall 2" },
+        { id: 1, day: "FRI 8 NOV", title: "SOCIAL DANCING", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
+        
     ],
     day2: [
-        { id: 3, day: "SAT", title: "Workshop C", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice", hall: "Hall 1" },
-        { id: 4, day: "SAT", title: "Workshop D", time: "10:00-11:00 am", level: "Advanced", instructor: "Dave", hall: "Hall 2" },
+        { id: 2, day: "SAT 9 NOV", title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
+        { id: 3, day: "SAT 9 NOV", title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall 2" },
+        { id: 4, day: "SAT 9 NOV", title: "HELL ON THE HEART", time: "9:50-10:30 am", level: "Easy Intermediate", instructor: "Gabrielle Barnier", hall: "Hall 1" },
+        { id: 5, day: "SAT 9 NOV", title: "LIVING NEXT DOOR TO ALICE", time: "9:50-10:30 am", level: "Basic +3", instructor: "Nev Flegg", hall: "Hall 2" },
+        { id: 6, day: "SAT 9 NOV", title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
+        { id: 7, day: "SAT 9 NOV", title: "TEXAS HOLD 'EM", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Shirley Smith", hall: "Hall 1" },
+        { id: 8, day: "SAT 9 NOV", title: "Soul", time: "10:45-11:25 am", level: "Intermediate", instructor: "Lynda Turner", hall: "Hall 2" },
+        { id: 9, day: "SAT 9 NOV", title: "BLUEGRASS RADIO", time: "11:35-12:15 pm", level: "Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
+        { id: 10, day: "SAT 9 NOV", title: "SUMMER NIGHTS", time: "11:35-12:15 pm", level: "Advanced", instructor: "Irmgard Huddy", hall: "Hall 2" },
+        { id: 11, day: "SAT 9 NOV", title: "LUNCH", time: "12:30-1:30 pm", level: "Super Easy", instructor: "None", hall: "Dining Hall" },
+        { id: 12, day: "SAT 9 NOV", title: "STILL IN LOVE WITH YOU", time: "1:30-2:10 pm", level: "Intermediate", instructor: "Chris Anderson", hall: "Hall 1" },
+        { id: 13, day: "SAT 9 NOV", title: "WHOOPS", time: "1:30-2:10 pm", level: "Basic +", instructor: "Amanda Lim", hall: "Hall 2" },
+        { id: 14, day: "SAT 9 NOV", title: "DREAMING", time: "2:20-3:00 pm", level: "Easy Intermediate", instructor: "Jenny Neal", hall: "Hall 1" },
+        { id: 15, day: "SAT 9 NOV", title: "GLITTER & GOLD", time: "2:20-3:00 pm", level: "Advanced", instructor: "Cheryl Holland & Peter Wee", hall: "Hall 2" },
+        { id: 16, day: "SAT 9 NOV", title: "AFTERNOON TEA", time: "3:00-3:15 pm", level: "Super Easy", instructor: "N/A", hall: "Outside" },
+        { id: 17, day: "SAT 9 NOV", title: "SAY YOU'LL BE THERE", time: "3:15-4:00 pm", level: "Easy Intermediate", instructor: "Josh King", hall: "Hall 1" },
+        { id: 18, day: "SAT 9 NOV", title: "LOLLIPOP", time: "3:15-4:00 pm", level: "Basic +", instructor: "Lyn Mitchell (taught by Irmgard Huddy)", hall: "Hall 2" },
+        { id: 19, day: "SAT 9 NOV", title: "I SEE COUNTRY VIDEO SHOOT", time: "4:00 pm", level: "Easy Intermediate", instructor: "N/A", hall: "Outside" },
+        { id: 20, day: "SAT 9 NOV", title: "DINNER", time: "6:00 pm", level: "Super Easy", instructor: "N/A", hall: "Dining Hall" },
+        { id: 21, day: "SAT 9 NOV", title: "SOCIAL DANCING", time: "7:30 pm", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
     ],
     day3: [
-        { id: 5, day: "SUN", title: "Workshop E", time: "9:00-10:00 am", level: "Beginner", instructor: "Eva", hall: "Hall 1" },
-        { id: 6, day: "SUN", title: "Workshop F", time: "11:00-12:00 pm", level: "Intermediate", instructor: "Frank", hall: "Hall 2" },
-    ],
+        { id: 22, day: "SUN 10 NOV", title: "TOGETHER", time: "9:00-9:40 am", level: "Intermediate Plus", instructor: "Nathan Ballard", hall: "Hall 1" },
+        { id: 23, day: "SUN 10 NOV", title: "VINCERO", time: "9:00-9:40 am", level: "Easy Intermediate", instructor: "Lindsay Rogers", hall: "Hall 2" },
+        { id: 24, day: "SUN 10 NOV", title: "POUR ME A DRINK", time: "9:50-10:30 am", level: "Intermediate", instructor: "Toni Trott", hall: "Hall 1" },
+        { id: 25, day: "SUN 10 NOV", title: "BACK TO LIFE", time: "9:50-10:30 am", level: "Advanced", instructor: "Peter Wee", hall: "Hall 2" },
+        { id: 26, day: "SUN 10 NOV", title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
+        { id: 27, day: "SUN 10 NOV", title: "SHAKE SHAKE", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Christine Collins", hall: "Hall 1" },
+        { id: 28, day: "SUN 10 NOV", title: "A BAR SONG", time: "10:45-11:25 am", level: "Basic +", instructor: "Cheryl Holland", hall: "Hall 2" },
+        { id: 29, day: "SUN 10 NOV", title: "ELECTRIC ENERGY", time: "11:30-12:10 am", level: "Easy Intermediate", instructor: "Nev Flegg", hall: "Hall 1" },
+    
+    ]
 };
 
 // Load workshops for a specific day
