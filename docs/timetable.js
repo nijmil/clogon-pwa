@@ -1,15 +1,16 @@
-// Sample workshop data
+// Workshop Data
 const workshopsByDay = {
     day1: [
         { id: 1, title: "Check In", time: "5:00 PM", level: "All Levels", instructor: "ALL", hall: "Not Applicable" },
-        { id: 2, title: "Social Dancing", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall One" },
-        { id: 3, title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall ONE" },
-        { id: 4, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall TWO" },
-        { id: 5, title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall ONE" },
-        { id: 6, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall TWO" },
+        { id: 2, title: "Social Dancing", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall ONE" },
+        
     ],
     day2: [
-        { id: 7, title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall ONE" },
+        { id: 3, title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall ONE" },
+        { id: 4, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall TWO" },
+        { id: 5, title: "HELL ON THE HEART", time: "9:50-10:30 am", level: "Easy Intermediate", instructor: "Gabrielle Barnier", hall: "Hall ONE" },
+        { id: 6, title: "LIVING NEXT DOOR TO ALICE", time: "9:50-10:30 am", level: "Basic +3", instructor: "Nev Flegg", hall: "Hall TWO" },
+        { id: 7, title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
         { id: 8, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall TWO" },
     ],
     day3: [
