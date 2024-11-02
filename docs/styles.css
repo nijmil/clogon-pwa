@@ -29,9 +29,9 @@ body {
 
 /* Button style */
 button {
-    display: inline-block;
+    display: block; /* Change from inline-block to block */
     width: 100%;
-    max-width: 150px;
+    max-width: 150px; /* This will still limit the width, but buttons will be on separate lines */
     padding: 12px;
     margin: 20px 0 5px; /* Adjust the bottom margin to add space below each button */
     background-color: #70dcdf;
@@ -43,6 +43,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 
 
 /* Hover effect for buttons */
