@@ -20,26 +20,33 @@ function showDay(dayId) {
     document.querySelectorAll('.day-content').forEach(content => {
         content.style.display = 'none';
     });
-    // Show the selected day content
-    document.getElementById(dayId).style.display = 'block';
 
-    // Load workshops for the selected day
+    // Show the selected day content
     const workshopsDiv = document.getElementById(dayId);
+    workshopsDiv.style.display = 'block'; // Ensure the selected day is visible
     workshopsDiv.innerHTML = ''; // Clear previous content
 
-    workshopsByDay[dayId].forEach(workshop => {
-        const workshopDiv = document.createElement('div');
-        workshopDiv.className = 'workshop';
-        workshopDiv.innerHTML = `
-            <h3>${workshop.title}</h3>
-            <p>Time: ${workshop.time}</p>
-            <p>Level: ${workshop.level}</p>
-            <p>Instructor: ${workshop.instructor}</p>
-            <p>Hall: ${workshop.hall}</p>
-            <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
-        `;
-        workshopsDiv.appendChild(workshopDiv);
-    });
+    // Load workshops for the selected day
+    const workshops = workshopsByDay[dayId];
+
+    // Check if there are workshops to display
+    if (workshops && workshops.length > 0) {
+        workshops.forEach(workshop => {
+            const workshopDiv = document.createElement('div');
+            workshopDiv.className = 'workshop';
+            workshopDiv.innerHTML = `
+                <h3>${workshop.title}</h3>
+                <p>Time: ${workshop.time}</p>
+                <p>Level: ${workshop.level}</p>
+                <p>Instructor: ${workshop.instructor}</p>
+                <p>Hall: ${workshop.hall}</p>
+                <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
+            `;
+            workshopsDiv.appendChild(workshopDiv);
+        });
+    } else {
+        workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>'; // Handle no workshops case
+    }
 }
 
 // Add workshop to localStorage
