@@ -1,3 +1,11 @@
+/* Logo style */
+.logo {
+    max-width: 150px; /* Adjust this to change the logo size */
+    height: auto; /* Maintains aspect ratio */
+    margin: 20px auto; /* Adds space around the logo and centers it */
+    display: block; /* Centers the image */
+}
+
 /* Tabs style */
 .tabs {
     display: flex;
@@ -34,4 +42,5 @@
     border-radius: 8px;
     margin-bottom: 15px;
 }
+
 
