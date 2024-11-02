@@ -1,16 +1,16 @@
 // Sample workshops data categorized by days
 const workshops = {
     day1: [
-        { id: 1, title: "Workshop A", time: "8:00-9:00 am", level: "Beginner", instructor: "Alice", hall: "Hall 1" },
-        { id: 2, title: "Workshop B", time: "9:30-10:30 am", level: "Intermediate", instructor: "Bob", hall: "Hall 2" },
+        { id: 1, title: "Workshop A", time: "8:00-9:00 am", level: "Beginner", instructor: "Alice", hall: "Hall 1", day: "FRI 8 Nov" },
+        { id: 2, title: "Workshop B", time: "9:30-10:30 am", level: "Intermediate", instructor: "Bob", hall: "Hall 2", day: "FRI 8 Nov" },
     ],
     day2: [
-        { id: 3, title: "Workshop C", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice", hall: "Hall 1" },
-        { id: 4, title: "Workshop D", time: "10:00-11:00 am", level: "Advanced", instructor: "Dave", hall: "Hall 2" },
+        { id: 3, title: "Workshop C", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice", hall: "Hall 1", day: "SAT 9 Nov" },
+        { id: 4, title: "Workshop D", time: "10:00-11:00 am", level: "Advanced", instructor: "Dave", hall: "Hall 2", day: "SAT 9 Nov" },
     ],
     day3: [
-        { id: 5, title: "Workshop E", time: "9:00-10:00 am", level: "Beginner", instructor: "Eva", hall: "Hall 1" },
-        { id: 6, title: "Workshop F", time: "11:00-12:00 pm", level: "Intermediate", instructor: "Frank", hall: "Hall 2" },
+        { id: 5, title: "Workshop E", time: "9:00-10:00 am", level: "Beginner", instructor: "Eva", hall: "Hall 1", day: "SUN 10 Nov" },
+        { id: 6, title: "Workshop F", time: "11:00-12:00 pm", level: "Intermediate", instructor: "Frank", hall: "Hall 2", day: "SUN 10 Nov" },
     ],
 };
 
@@ -24,28 +24,14 @@ function loadWorkshops(day) {
         workshopDiv.className = 'workshop';
         workshopDiv.innerHTML = `
             <h3>${workshop.title}</h3>
-            <p>${workshop.time}</p>
-            <p>${workshop.level}</p>
-            <p>${workshop.instructor}</p>
-            <p>${workshop.hall}</p>
+            <p>Time: ${workshop.time}</p>
+            <p>Level: ${workshop.level}</p>
+            <p>Instructor: ${workshop.instructor}</p>
+            <p>Hall: ${workshop.hall}</p>
             <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
         `;
         dayDiv.appendChild(workshopDiv);
     });
-}
-
-// Show specific day's workshops
-function showDay(dayId) {
-    const days = document.querySelectorAll('.day-content');
-    const buttons = document.querySelectorAll('.tab-button');
-
-    days.forEach(day => day.style.display = 'none');
-    buttons.forEach(button => button.classList.remove('active'));
-
-    document.getElementById(dayId).style.display = 'block';
-    document.querySelector(`button[data-day="${dayId}"]`).classList.add('active');
-
-    loadWorkshops(dayId); // Load workshops for the selected day
 }
 
 // Add workshop to localStorage
@@ -79,10 +65,11 @@ function displayMyProgram() {
             workshopDiv.className = 'workshop';
             workshopDiv.innerHTML = `
                 <h3>${workshop.title}</h3>
-                <p>${workshop.time}</p>
-                <p>${workshop.level}</p>
-                <p>${workshop.instructor}</p>
-                <p>${workshop.hall}</p>
+                <p>Day: ${workshop.day}</p>
+                <p>Time: ${workshop.time}</p>
+                <p>Level: ${workshop.level}</p>
+                <p>Instructor: ${workshop.instructor}</p>
+                <p>Hall: ${workshop.hall}</p>
             `;
             myProgramDiv.appendChild(workshopDiv);
         });
@@ -98,3 +85,4 @@ window.onload = function() {
     });
     displayMyProgram(); // Display any previously added workshops
 };
+
