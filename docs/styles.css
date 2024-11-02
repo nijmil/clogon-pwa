@@ -112,24 +112,6 @@ h1 {
     color: #ff5733; /* Change this color to your desired color */
 }
 
-/* Button style */
-button, .button-style {
-    display: block; 
-    width: 100%;
-    max-width: 400px; /* Adjust width as desired */
-    padding: 12px;
-    margin: 15px auto 0px;
-    background-color: #f3d7cc;
-    color: #ce3513;
-    border: none;
-    border-radius: 8px;
-    font-size: 20px; /* Increase font size for heading */
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
 /* Hover effect for both button and heading */
 button:hover, .button-style:hover {
     background-color: #f6b095;
