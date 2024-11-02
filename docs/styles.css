@@ -30,10 +30,10 @@ body {
 /* Button style */
 button {
     display: inline-block;
-    width: 100%; /* Makes all buttons the same width */
-    max-width: 200px; /* Limits button width to ensure they aren't too wide */
+    width: 100%;
+    max-width: 200px;
     padding: 12px;
-    margin: 10px 0;
+    margin: 10px 0 20px; /* Adjust the bottom margin to add space below each button */
     background-color: #1a73e8;
     color: white;
     border: none;
@@ -43,6 +43,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 
 /* Hover effect for buttons */
 button:hover {
