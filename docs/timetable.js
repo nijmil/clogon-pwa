@@ -58,34 +58,8 @@ function addToProgram(workshopId) {
         myProgram.push(workshop);
         localStorage.setItem('myProgram', JSON.stringify(myProgram));
         alert(`${workshop.title} has been added to your program.`);
-        displayMyProgram(); // Update the display of the personal program
     } else {
         alert(`${workshop.title} is already in your program.`);
-    }
-}
-
-// Display the user's program
-function displayMyProgram() {
-    const myProgramDiv = document.getElementById('myProgram');
-    const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
-    
-    myProgramDiv.innerHTML = ''; // Clear previous content
-
-    if (myProgram.length === 0) {
-        myProgramDiv.innerHTML = '<p>No workshops added to your program.</p>';
-    } else {
-        myProgram.forEach(workshop => {
-            const workshopDiv = document.createElement('div');
-            workshopDiv.className = 'workshop';
-            workshopDiv.innerHTML = `
-                <h3>${workshop.title}</h3>
-                <p>${workshop.time}</p>
-                <p>${workshop.level}</p>
-                <p>${workshop.instructor}</p>
-                <p>${workshop.hall}</p>
-            `;
-            myProgramDiv.appendChild(workshopDiv);
-        });
     }
 }
 
@@ -96,5 +70,4 @@ window.onload = function() {
     buttons.forEach(button => {
         button.addEventListener('click', () => showDay(button.getAttribute('data-day')));
     });
-    displayMyProgram(); // Display any previously added workshops
 };
