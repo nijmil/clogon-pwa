@@ -64,7 +64,8 @@ function showDay(dayId) {
                 <p class="centered">${workshop.level}</p>
                 <p class="centered">${workshop.instructor}</p>
                 <p class="centered">${workshop.hall}</p>
-                <button onclick="addToProgram(${encodeURIComponent(JSON.stringify({...workshop, day: dayId}))})">Add to My Program</button>
+                <button onclick="addToProgram('${encodeURIComponent(JSON.stringify({...workshop, day: dayId}))}')">Add to My Program</button>
+
             `;
             workshopsDiv.appendChild(workshopDiv);
         });
