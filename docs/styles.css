@@ -12,7 +12,7 @@ body {
 .logo {
     max-width: 270px; /* Adjust this to change the logo size */
     height: auto; /* Maintains aspect ratio */
-    margin: 20px auto 75px; /* Change bottom margin to increase space below logo */
+    margin: 20px auto 80px; /* Change bottom margin to increase space below logo */
     display: block; /* Centers the image */
 }
 
@@ -115,4 +115,17 @@ h1 {
 /* Hover effect for both button and heading */
 button:hover, .button-style:hover {
     background-color: #f6b095;
+}
+
+/* Header box style */
+.header-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #ce3513; /* Same text color as buttons */
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto 20px; /* Center the container and add spacing below */
 }
