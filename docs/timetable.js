@@ -1,12 +1,12 @@
 // Sample workshop data
 const workshopsByDay = {
     day1: [
-        { id: 1, title: "Check In", time: "5:00 PM", level: "All Levels" },
-        { id: 2, title: "Social Dancing", time: "7:30 PM", level: "Beginner", hall: "Hall One" },
+        { id: 1, title: "Check In", time: "5:00 PM", level: "All Levels", instructor: "ALL", hall: "Not Applicable" },
+        { id: 2, title: "Social Dancing", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall One" },
     ],
     day2: [
-        { id: 3, title: "Intermediate Techniques", time: "10:00 AM", level: "Intermediate", instructor: "Alice Johnson", hall: "Hall C" },
-        { id: 4, title: "Advanced Techniques", time: "11:30 AM", level: "Advanced", instructor: "Robert Brown", hall: "Hall D" },
+        { id: 3, title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall ONE" },
+        { id: 4, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall TWO" },
     ],
     day3: [
         { id: 5, title: "Dance Routine Workshop", time: "10:00 AM", level: "Intermediate", instructor: "Emily Davis", hall: "Hall E" },
