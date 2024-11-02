@@ -1,5 +1,6 @@
 // Workshop Data
-const workshopsByDay = {
+
+const workshops = {
     day1: [
         { id: 1, day: "FRI 8 NOV", title: "SOCIAL DANCING", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
         
@@ -36,9 +37,8 @@ const workshopsByDay = {
         { id: 28, day: "SUN 10 NOV", title: "A BAR SONG", time: "10:45-11:25 am", level: "Basic +", instructor: "Cheryl Holland", hall: "Hall 2" },
         { id: 29, day: "SUN 10 NOV", title: "ELECTRIC ENERGY", time: "11:30-12:10 am", level: "Easy Intermediate", instructor: "Nev Flegg", hall: "Hall 1" },
     
-    ]
+    ],
 };
-
 // Load workshops for a specific day
 function loadWorkshops(day) {
     const dayDiv = document.getElementById(day);
