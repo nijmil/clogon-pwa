@@ -72,23 +72,3 @@ function showDay(dayId) {
         workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>'; // Handle no workshops case
     }
 }
-
-
-// Add workshop to localStorage
-function addToProgram(id) {
-    const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
-    const workshop = Object.values(workshopsByDay)
-                           .flat()
-                           .find(w => w.id === id);
-    if (!myProgram.some(w => w.id === workshop.id)) {
-        myProgram.push(workshop);
-        localStorage.setItem('myProgram', JSON.stringify(myProgram));
-        alert(`${workshop.title} has been added to your program.`);
-    } else {
-        alert(`${workshop.title} is already in your program.`);
-    }
-}
-
-
-
-
