@@ -12,7 +12,7 @@ body {
 .logo {
     max-width: 270px; /* Adjust this to change the logo size */
     height: auto; /* Maintains aspect ratio */
-    margin: 20px auto 50px; /* Change bottom margin to increase space below logo */
+    margin: 20px auto 60px; /* Change bottom margin to increase space below logo */
     display: block; /* Centers the image */
 }
 
@@ -34,7 +34,7 @@ button {
     max-width: 140px; /* This will still limit the width, but buttons will be on separate lines */
     padding: 12px;
     margin: 20px auto 5px; /* Adjust the bottom margin to add space below each button */
-    background-color: #70dcdf;
+    background-color: #f3d7cc;
     color: #ce3513;
     border: none;
     border-radius: 8px;
