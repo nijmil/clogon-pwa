@@ -41,7 +41,7 @@ function showDay(dayId) {
             workshopDiv.className = 'workshop';
             workshopDiv.innerHTML = `
                 <h3>${workshop.title}</h3>
-                <p>Time: ${workshop.time}</p>
+                <p>${workshop.time}</p>  <!-- Updated line to show only time -->
                 <p>Level: ${workshop.level}</p>
                 <p>Instructor: ${workshop.instructor}</p>
                 <p>Hall: ${workshop.hall}</p>
@@ -53,6 +53,7 @@ function showDay(dayId) {
         workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>'; // Handle no workshops case
     }
 }
+
 
 // Add workshop to localStorage
 function addToProgram(id) {
