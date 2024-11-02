@@ -12,12 +12,12 @@ function displayMyProgram() {
             const workshopDiv = document.createElement('div');
             workshopDiv.className = 'workshop';
             workshopDiv.innerHTML = `
+                <h2>${workshop.day}</h2>
                 <h3>${workshop.title}</h3>
-                <p>Time: ${workshop.day}</p>
-                <p>Time: ${workshop.time}</p>
-                <p>Level: ${workshop.level}</p>
-                <p>Instructor: ${workshop.instructor}</p>
-                <p>Hall: ${workshop.hall}</p>
+                <p>${workshop.time}</p>
+                <p>${workshop.level}</p>
+                <p>${workshop.instructor}</p>
+                <p>${workshop.hall}</p>
             `;
             myProgramList.appendChild(workshopDiv);
         });
