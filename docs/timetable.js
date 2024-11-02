@@ -11,11 +11,24 @@ const workshopsByDay = {
         { id: 5, title: "HELL ON THE HEART", time: "9:50-10:30 am", level: "Easy Intermediate", instructor: "Gabrielle Barnier", hall: "Hall ONE" },
         { id: 6, title: "LIVING NEXT DOOR TO ALICE", time: "9:50-10:30 am", level: "Basic +3", instructor: "Nev Flegg", hall: "Hall TWO" },
         { id: 7, title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
-        { id: 8, title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall TWO" },
+        { id: 8, title: "TEXAS HOLD 'EM", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Shirley Smith", hall: "Hall ONE" },
+        { id: 9, title: "Soul", time: "10:45-11:25 am", level: "Intermediate", instructor: "Lynda Turner", hall: "Hall TWO" },
+        { id: 10, title: "BLUEGRASS RADIO", time: "11:35-12:15 pm", level: "Intermediate", instructor: "Janice Hanzel", hall: "Hall ONE" },
+        { id: 11, title: "SUMMER NIGHTS", time: "11:35-12:15 pm", level: "Advanced", instructor: "Irmgard Huddy", hall: "Hall TWO" },
+        { id: 12, title: "LUNCH", time: "12:30-1:30 pm", level: "Super Easy", instructor: "None", hall: "Dining Hall" },
+        { id: 13, title: "STILL IN LOVE WITH YOU", time: "1:30-2:10 pm", level: "Intermediate", instructor: "Chris Anderson", hall: "Hall ONE" },
+        { id: 14, title: "WHOOPS", time: "1:30-2:10 pm", level: "Basic +", instructor: "Amanda Lim", hall: "Hall TWO" },
+        { id: 15, title: "DREAMING", time: "2:20-3:00 pm", level: "Easy Intermediate", instructor: "Jenny Neal", hall: "Hall ONE" },
+        { id: 16, title: "GLITTER & GOLD", time: "2:20-3:00 pm", level: "Advanced", instructor: "Cheryl Holland & Peter Wee", hall: "Hall TWO" },
+        { id: 17, title: "AFTERNOON TEA", time: "3:00-3:15 pm", level: "Super Easy", instructor: "N/A", hall: "Outside" },
+        { id: 18, title: "SAY YOU'LL BE THERE", time: "3:15-4:00 pm", level: "Easy Intermediate", instructor: "Josh King", hall: "Hall ONE" },
+        { id: 19, title: "LOLLIPOP", time: "3:15-4:00 pm", level: "Basic +", instructor: "Lyn Mitchell (taught by Irmgard Huddy)", hall: "Hall TWO" },
+        { id: 20, title: "I SEE COUNTRY VIDEO SHOOT", time: "4:00 pm", level: "Easy Intermediate", instructor: "N/A", hall: "Outside" },
+        { id: 21, title: "DINNER", time: "6:00 pm", level: "Super Easy", instructor: "N/A", hall: "Dining Hall" },
     ],
     day3: [
-        { id: 9, title: "Dance Routine Workshop", time: "10:00 AM", level: "Intermediate", instructor: "Emily Davis", hall: "Hall E" },
-        { id: 10, title: "Showcase Performance", time: "2:00 PM", level: "All Levels", instructor: "Michael Wilson", hall: "Hall F" },
+        { id: 10, title: "Dance Routine Workshop", time: "10:00 AM", level: "Intermediate", instructor: "Emily Davis", hall: "Hall E" },
+        { id: 11, title: "Showcase Performance", time: "2:00 PM", level: "All Levels", instructor: "Michael Wilson", hall: "Hall F" },
     ]
 };
 
