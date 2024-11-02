@@ -7,27 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="timetable.js"></script>
-    <script>
-        // Function to display a specific day's timetable
-        function showDay(dayId) {
-            const days = document.querySelectorAll('.day-content');
-            const buttons = document.querySelectorAll('.tab-button');
-
-            days.forEach(day => day.style.display = 'none');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            document.getElementById(dayId).style.display = 'block';
-            document.querySelector(`button[data-day="${dayId}"]`).classList.add('active');
-        }
-
-        window.onload = function() {
-            showDay('day1');
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', () => showDay(button.getAttribute('data-day')));
-            });
-        };
-    </script>
 </head>
 <body>
     <div class="container">
@@ -36,6 +15,7 @@
             <button class="tab-button" data-day="day2">SAT 9 Nov</button>
             <button class="tab-button" data-day="day3">SUN 10 Nov</button>
         </div>
+
         <div id="day1" class="day-content">
             <!-- Day 1 workshops will be loaded here by timetable.js -->
         </div>
@@ -45,6 +25,10 @@
         <div id="day3" class="day-content" style="display: none;">
             <!-- Day 3 workshops will be loaded here by timetable.js -->
         </div>
+
+        <h2>My Program</h2>
+        <div id="myProgram"></div>
     </div>
 </body>
 </html>
+
