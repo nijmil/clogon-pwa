@@ -1,14 +1,13 @@
-// Function to display the user's program workshops
+// Function to load and display My Program
 function displayMyProgram() {
-    // Get the user's program from localStorage
-    const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
     const myProgramList = document.getElementById('myProgramList');
+    const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
 
-    // Clear existing content in the list
-    myProgramList.innerHTML = ''; 
+    myProgramList.innerHTML = ''; // Clear previous content
 
-    // Display each workshop in the user's program with all details
-    if (myProgram.length > 0) {
+    if (myProgram.length === 0) {
+        myProgramList.innerHTML = '<p>You haven\'t added any workshops yet.</p>';
+    } else {
         myProgram.forEach(workshop => {
             const workshopDiv = document.createElement('div');
             workshopDiv.className = 'workshop';
@@ -22,12 +21,12 @@ function displayMyProgram() {
             `;
             myProgramList.appendChild(workshopDiv);
         });
-    } else {
-        myProgramList.innerHTML = '<p>You haven\'t added any workshops yet.</p>';
     }
 }
 
-// Call displayMyProgram on page load
+// Run display function on page load
 window.onload = displayMyProgram;
+
+
 
 
