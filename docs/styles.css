@@ -6,6 +6,36 @@
     display: block; /* Centers the image */
 }
 
+/* Container style */
+.container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Button style */
+button {
+    display: inline-block;
+    width: 100%; /* Makes all buttons the same width */
+    max-width: 200px; /* Limits button width to ensure they aren't too wide */
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #135ab8;
+}
+
 /* Tabs style */
 .tabs {
     display: flex;
@@ -35,6 +65,7 @@
     text-align: left;
 }
 
+/* Workshop style */
 .workshop {
     background-color: #fff;
     padding: 15px;
@@ -42,5 +73,3 @@
     border-radius: 8px;
     margin-bottom: 15px;
 }
-
-
