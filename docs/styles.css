@@ -33,7 +33,7 @@ button {
     width: 100%;
     max-width: 115px; /* This will still limit the width, but buttons will be on separate lines */
     padding: 12px;
-    margin: 20px auto 2px; /* Adjust the bottom margin to add space below each button */
+    margin: 20px auto 1px; /* Adjust the bottom margin to add space below each button */
     background-color: #f3d7cc;
     color: #ce3513;
     border: none;
