@@ -47,13 +47,12 @@ function showDay(dayId) {
 
     // Show the selected day content
     const workshopsDiv = document.getElementById(dayId);
-    workshopsDiv.style.display = 'block'; // Ensure the selected day is visible
-    workshopsDiv.innerHTML = ''; // Clear previous content
+    workshopsDiv.style.display = 'block';
+    workshopsDiv.innerHTML = '';
 
     // Load workshops for the selected day
     const workshops = workshopsByDay[dayId];
 
-    // Check if there are workshops to display
     if (workshops && workshops.length > 0) {
         workshops.forEach(workshop => {
             const workshopDiv = document.createElement('div');
@@ -64,20 +63,19 @@ function showDay(dayId) {
                 <p class="centered">${workshop.level}</p>
                 <p class="centered">${workshop.instructor}</p>
                 <p class="centered">${workshop.hall}</p>
-                <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
+                <button onclick="addToProgram(${JSON.stringify({...workshop, day: dayId})})">Add to My Program</button>
             `;
             workshopsDiv.appendChild(workshopDiv);
         });
     } else {
-        workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>'; // Handle no workshops case
+        workshopsDiv.innerHTML = '<p>No workshops available for this day.</p>';
     }
 }
+
 // Add workshop to localStorage
-function addToProgram(id) {
+function addToProgram(workshop) {
     const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
-    const workshop = Object.values(workshopsByDay)
-                           .flat()
-                           .find(w => w.id === id);
+    
     if (!myProgram.some(w => w.id === workshop.id)) {
         myProgram.push(workshop);
         localStorage.setItem('myProgram', JSON.stringify(myProgram));
@@ -86,15 +84,3 @@ function addToProgram(id) {
         alert(`${workshop.title} is already in your program.`);
     }
 }
-
-
-const workshopDiv = document.createElement('div');
-workshopDiv.className = 'workshop';
-workshopDiv.innerHTML = `
-    <h3 class="centered">${workshop.title}</h3>
-    <p class="centered">${workshop.time}</p>
-    <p class="centered">${workshop.level}</p>
-    <p class="centered">${workshop.instructor}</p>
-    <p class="centered">${workshop.hall}</p>
-    <button onclick="addToProgram(${workshop.id})">Add to My Program</button>
-`;
