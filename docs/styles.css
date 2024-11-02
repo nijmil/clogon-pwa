@@ -88,4 +88,5 @@ button:hover {
     border-radius: 8px;
     margin-bottom: 15px;
     color: #000; /* Change text color to black for better contrast */
+    text-align: center; /* Center the text inside the workshop container */
 }
