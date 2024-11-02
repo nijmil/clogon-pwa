@@ -24,6 +24,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     /* Remove background for full transparency */
+    margin-top: 50px; /* Adjust this to add more space above the entire container */
 }
 
 /* Button style */
