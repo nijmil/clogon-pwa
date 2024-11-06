@@ -73,7 +73,6 @@ function showDay(dayId) {
     loadWorkshops(dayId); // Load workshops for the selected day
 }
 
-// Add workshop to localStorage
 function addToProgram(workshopId) {
     const myProgram = JSON.parse(localStorage.getItem('myProgram')) || [];
     const workshop = Object.values(workshops).flat().find(w => w.id === workshopId);
@@ -85,19 +84,36 @@ function addToProgram(workshopId) {
         // Add the workshop object including 'day' to myProgram
         myProgram.push({
             id: workshop.id,
-            day: workshop.day,         // Ensure 'day' is included
+            day: workshop.day,
             title: workshop.title,
             time: workshop.time,
             level: workshop.level,
             instructor: workshop.instructor,
             hall: workshop.hall
         });
+
+        // Sort myProgram by day and time
+        myProgram.sort((a, b) => {
+            const dayOrder = ["FRI 8 NOV", "SAT 9 NOV", "SUN 10 NOV"]; // Order of days
+            const dayA = dayOrder.indexOf(a.day);
+            const dayB = dayOrder.indexOf(b.day);
+            
+            if (dayA !== dayB) {
+                return dayA - dayB; // Sort by day
+            } else {
+                const timeA = Date.parse(`1970-01-01T${a.time.split("-")[0].trim()}`);
+                const timeB = Date.parse(`1970-01-01T${b.time.split("-")[0].trim()}`);
+                return timeA - timeB; // Sort by time within the same day
+            }
+        });
+
         localStorage.setItem('myProgram', JSON.stringify(myProgram));
         alert(`${workshop.title} has been added to your program.`);
     } else {
         alert(`${workshop.title} is already in your program.`);
     }
 }
+
 
 // Initialize the app on page load
 window.onload = function() {
