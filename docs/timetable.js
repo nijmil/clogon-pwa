@@ -2,40 +2,40 @@
 
 const workshops = {
     day1: [
-        { id: 1, day: "FRI 8 NOV", title: "SOCIAL DANCING", time: "7:30 PM", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
+        { id: 1, day: "FRI 8 NOV", title: "SOCIAL DANCING", time: "7:30 PM", tfhr: "19:30", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
         
     ],
     day2: [
-        { id: 2, day: "SAT 9 NOV", title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
-        { id: 3, day: "SAT 9 NOV", title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall 2" },
-        { id: 4, day: "SAT 9 NOV", title: "HELL ON THE HEART", time: "9:50-10:30 am", level: "Easy Intermediate", instructor: "Gabrielle Barnier", hall: "Hall 1" },
-        { id: 5, day: "SAT 9 NOV", title: "LIVING NEXT DOOR TO ALICE", time: "9:50-10:30 am", level: "Basic +3", instructor: "Nev Flegg", hall: "Hall 2" },
-        { id: 6, day: "SAT 9 NOV", title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
-        { id: 7, day: "SAT 9 NOV", title: "TEXAS HOLD 'EM", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Shirley Smith", hall: "Hall 1" },
-        { id: 8, day: "SAT 9 NOV", title: "Soul", time: "10:45-11:25 am", level: "Intermediate", instructor: "Lynda Turner", hall: "Hall 2" },
-        { id: 9, day: "SAT 9 NOV", title: "BLUEGRASS RADIO", time: "11:35-12:15 pm", level: "Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
-        { id: 10, day: "SAT 9 NOV", title: "SUMMER NIGHTS", time: "11:35-12:15 pm", level: "Advanced", instructor: "Irmgard Huddy", hall: "Hall 2" },
-        { id: 11, day: "SAT 9 NOV", title: "LUNCH", time: "12:30-1:30 pm", level: "Super Easy", instructor: "None", hall: "Dining Hall" },
-        { id: 12, day: "SAT 9 NOV", title: "STILL IN LOVE WITH YOU", time: "1:30-2:10 pm", level: "Intermediate", instructor: "Chris Anderson", hall: "Hall 1" },
-        { id: 13, day: "SAT 9 NOV", title: "WHOOPS", time: "1:30-2:10 pm", level: "Basic +", instructor: "Amanda Lim", hall: "Hall 2" },
-        { id: 14, day: "SAT 9 NOV", title: "DREAMING", time: "2:20-3:00 pm", level: "Easy Intermediate", instructor: "Jenny Neal", hall: "Hall 1" },
-        { id: 15, day: "SAT 9 NOV", title: "GLITTER & GOLD", time: "2:20-3:00 pm", level: "Advanced", instructor: "Cheryl Holland & Peter Wee", hall: "Hall 2" },
-        { id: 16, day: "SAT 9 NOV", title: "AFTERNOON TEA", time: "3:00-3:15 pm", level: "Super Easy", instructor: "N/A", hall: "Outside" },
-        { id: 17, day: "SAT 9 NOV", title: "SAY YOU'LL BE THERE", time: "3:15-4:00 pm", level: "Easy Intermediate", instructor: "Josh King", hall: "Hall 1" },
-        { id: 18, day: "SAT 9 NOV", title: "LOLLIPOP", time: "3:15-4:00 pm", level: "Basic +", instructor: "Lyn Mitchell (taught by Irmgard Huddy)", hall: "Hall 2" },
-        { id: 19, day: "SAT 9 NOV", title: "I SEE COUNTRY VIDEO SHOOT", time: "4:00 pm", level: "Easy Intermediate", instructor: "N/A", hall: "Outside" },
-        { id: 20, day: "SAT 9 NOV", title: "DINNER", time: "6:00 pm", level: "Super Easy", instructor: "N/A", hall: "Dining Hall" },
-        { id: 21, day: "SAT 9 NOV", title: "SOCIAL DANCING", time: "7:30 pm", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
+        { id: 2, day: "SAT 9 NOV", title: "SKIP TO MY LOU (Interactive)", time: "8:45-9:40 am", tfhr: "08:45", level: "Easy Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
+        { id: 3, day: "SAT 9 NOV", title: "ADVANCED STEP WORKSHOP", time: "8:45-9:40 am", tfhr: "08:45", level: "Advanced", instructor: "Amanda, Bronte, Nathan & Peter", hall: "Hall 2" },
+        { id: 4, day: "SAT 9 NOV", title: "HELL ON THE HEART", time: "9:50-10:30 am", tfhr: "09:50", level: "Easy Intermediate", instructor: "Gabrielle Barnier", hall: "Hall 1" },
+        { id: 5, day: "SAT 9 NOV", title: "LIVING NEXT DOOR TO ALICE", time: "9:50-10:30 am", tfhr: "09:50", level: "Basic +3", instructor: "Nev Flegg", hall: "Hall 2" },
+        { id: 6, day: "SAT 9 NOV", title: "MORNING TEA", time: "10:30-10:45 am", tfhr: "10:30", level: "Super Easy", instructor: "None", hall: "Outside" },
+        { id: 7, day: "SAT 9 NOV", title: "TEXAS HOLD 'EM", time: "10:45-11:25 am", tfhr: "10:45", level: "Easy Intermediate", instructor: "Shirley Smith", hall: "Hall 1" },
+        { id: 8, day: "SAT 9 NOV", title: "Soul", time: "10:45-11:25 am", tfhr: "10:45", level: "Intermediate", instructor: "Lynda Turner", hall: "Hall 2" },
+        { id: 9, day: "SAT 9 NOV", title: "BLUEGRASS RADIO", time: "11:35-12:15 pm", tfhr: "11:35", level: "Intermediate", instructor: "Janice Hanzel", hall: "Hall 1" },
+        { id: 10, day: "SAT 9 NOV", title: "SUMMER NIGHTS", time: "11:35-12:15 pm", tfhr: "11:35", level: "Advanced", instructor: "Irmgard Huddy", hall: "Hall 2" },
+        { id: 11, day: "SAT 9 NOV", title: "LUNCH", time: "12:30-1:30 pm", tfhr: "12:30", level: "Super Easy", instructor: "None", hall: "Dining Hall" },
+        { id: 12, day: "SAT 9 NOV", title: "STILL IN LOVE WITH YOU", time: "1:30-2:10 pm", tfhr: "13:30", level: "Intermediate", instructor: "Chris Anderson", hall: "Hall 1" },
+        { id: 13, day: "SAT 9 NOV", title: "WHOOPS", time: "1:30-2:10 pm", tfhr: "13:30", level: "Basic +", instructor: "Amanda Lim", hall: "Hall 2" },
+        { id: 14, day: "SAT 9 NOV", title: "DREAMING", time: "2:20-3:00 pm", tfhr: "14:20", level: "Easy Intermediate", instructor: "Jenny Neal", hall: "Hall 1" },
+        { id: 15, day: "SAT 9 NOV", title: "GLITTER & GOLD", time: "2:20-3:00 pm", tfhr: "14:20", level: "Advanced", instructor: "Cheryl Holland & Peter Wee", hall: "Hall 2" },
+        { id: 16, day: "SAT 9 NOV", title: "AFTERNOON TEA", time: "3:00-3:15 pm", tfhr: "15:00", level: "Super Easy", instructor: "N/A", hall: "Outside" },
+        { id: 17, day: "SAT 9 NOV", title: "SAY YOU'LL BE THERE", time: "3:15-4:00 pm", tfhr: "15:15", level: "Easy Intermediate", instructor: "Josh King", hall: "Hall 1" },
+        { id: 18, day: "SAT 9 NOV", title: "LOLLIPOP", time: "3:15-4:00 pm", tfhr: "15:15", level: "Basic +", instructor: "Lyn Mitchell (taught by Irmgard Huddy)", hall: "Hall 2" },
+        { id: 19, day: "SAT 9 NOV", title: "I SEE COUNTRY VIDEO SHOOT", time: "4:00 pm", tfhr: "16:00", level: "Easy Intermediate", instructor: "N/A", hall: "Outside" },
+        { id: 20, day: "SAT 9 NOV", title: "DINNER", time: "6:00 pm", tfhr: "18:00", level: "Super Easy", instructor: "N/A", hall: "Dining Hall" },
+        { id: 21, day: "SAT 9 NOV", title: "SOCIAL DANCING", time: "7:30 pm", tfhr: "19:30", level: "All Levels", instructor: "ALL", hall: "Hall 1" },
     ],
     day3: [
-        { id: 22, day: "SUN 10 NOV", title: "TOGETHER", time: "9:00-9:40 am", level: "Intermediate Plus", instructor: "Nathan Ballard", hall: "Hall 1" },
-        { id: 23, day: "SUN 10 NOV", title: "VINCERO", time: "9:00-9:40 am", level: "Easy Intermediate", instructor: "Lindsay Rogers", hall: "Hall 2" },
-        { id: 24, day: "SUN 10 NOV", title: "POUR ME A DRINK", time: "9:50-10:30 am", level: "Intermediate", instructor: "Toni Trott", hall: "Hall 1" },
-        { id: 25, day: "SUN 10 NOV", title: "BACK TO LIFE", time: "9:50-10:30 am", level: "Advanced", instructor: "Peter Wee", hall: "Hall 2" },
-        { id: 26, day: "SUN 10 NOV", title: "MORNING TEA", time: "10:30-10:45 am", level: "Super Easy", instructor: "None", hall: "Outside" },
-        { id: 27, day: "SUN 10 NOV", title: "SHAKE SHAKE", time: "10:45-11:25 am", level: "Easy Intermediate", instructor: "Christine Collins", hall: "Hall 1" },
-        { id: 28, day: "SUN 10 NOV", title: "A BAR SONG", time: "10:45-11:25 am", level: "Basic +", instructor: "Cheryl Holland", hall: "Hall 2" },
-        { id: 29, day: "SUN 10 NOV", title: "ELECTRIC ENERGY", time: "11:30-12:10 am", level: "Easy Intermediate", instructor: "Nev Flegg", hall: "Hall 1" },
+        { id: 22, day: "SUN 10 NOV", title: "TOGETHER", time: "9:00-9:40 am", tfhr: "09:00", level: "Intermediate Plus", instructor: "Nathan Ballard", hall: "Hall 1" },
+        { id: 23, day: "SUN 10 NOV", title: "VINCERO", time: "9:00-9:40 am", tfhr: "09:00", level: "Easy Intermediate", instructor: "Lindsay Rogers", hall: "Hall 2" },
+        { id: 24, day: "SUN 10 NOV", title: "POUR ME A DRINK", time: "9:50-10:30 am", tfhr: "09:50", level: "Intermediate", instructor: "Toni Trott", hall: "Hall 1" },
+        { id: 25, day: "SUN 10 NOV", title: "BACK TO LIFE", time: "9:50-10:30 am", tfhr: "09:50", level: "Advanced", instructor: "Peter Wee", hall: "Hall 2" },
+        { id: 26, day: "SUN 10 NOV", title: "MORNING TEA", time: "10:30-10:45 am", tfhr: "10:30", level: "Super Easy", instructor: "None", hall: "Outside" },
+        { id: 27, day: "SUN 10 NOV", title: "SHAKE SHAKE", time: "10:45-11:25 am", tfhr: "10:45", level: "Easy Intermediate", instructor: "Christine Collins", hall: "Hall 1" },
+        { id: 28, day: "SUN 10 NOV", title: "A BAR SONG", time: "10:45-11:25 am", tfhr: "10:45", level: "Basic +", instructor: "Cheryl Holland", hall: "Hall 2" },
+        { id: 29, day: "SUN 10 NOV", title: "ELECTRIC ENERGY", time: "11:30-12:10 am", tfhr: "11:30", level: "Easy Intermediate", instructor: "Nev Flegg", hall: "Hall 1" },
     
     ],
 };
@@ -81,29 +81,28 @@ function addToProgram(workshopId) {
 
     // Check if the workshop is already in the user's program
     if (!myProgram.some(w => w.id === workshopId)) {
-        // Add the workshop object including 'day' to myProgram
+        // Add the workshop object including 'day', 'time', and 'tfhr' to myProgram
         myProgram.push({
             id: workshop.id,
             day: workshop.day,
             title: workshop.title,
-            time: workshop.time,
+            time: workshop.time,  // Original display time (e.g., "7:30 PM")
+            tfhr: workshop.tfhr,   // 24-hour time for sorting (e.g., "19:30")
             level: workshop.level,
             instructor: workshop.instructor,
             hall: workshop.hall
         });
 
-        // Sort myProgram by day and time
+        // Sort myProgram by day and tfhr time
         myProgram.sort((a, b) => {
             const dayOrder = ["FRI 8 NOV", "SAT 9 NOV", "SUN 10 NOV"]; // Order of days
             const dayA = dayOrder.indexOf(a.day);
             const dayB = dayOrder.indexOf(b.day);
-            
+
             if (dayA !== dayB) {
                 return dayA - dayB; // Sort by day
             } else {
-                const timeA = Date.parse(`1970-01-01T${a.time.split("-")[0].trim()}`);
-                const timeB = Date.parse(`1970-01-01T${b.time.split("-")[0].trim()}`);
-                return timeA - timeB; // Sort by time within the same day
+                return a.tfhr.localeCompare(b.tfhr); // Sort by tfhr (24-hour time) for chronological order
             }
         });
 
@@ -113,6 +112,7 @@ function addToProgram(workshopId) {
         alert(`${workshop.title} is already in your program.`);
     }
 }
+
 
 
 // Initialize the app on page load
