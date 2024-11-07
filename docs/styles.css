@@ -131,10 +131,11 @@ button:hover, .button-style:hover {
 }
 /* Style for the floating back-to-home button */
 .floating-back-button {
-    position: fixed; /* Fixes the button position relative to the viewport */
-    bottom: 20px; /* Positions the button 20px from the bottom */
-    right: 20px; /* Positions the button 20px from the right */
-    padding: 10px 15px; /* Smaller padding */
+    position: fixed; /* Keeps it fixed to the viewport */
+    right: 20px; /* Positions it towards the right */
+    top: auto; /* Don't fix it to the top */
+    bottom: 20px; /* Place it at 20px from the bottom, but will float as you scroll */
+    padding: 8px 15px; /* Smaller padding for the button */
     background-color: #f3d7cc;
     color: #ce3513;
     border: none;
@@ -143,12 +144,13 @@ button:hover, .button-style:hover {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 1000; /* Ensures the button appears on top */
+    z-index: 1000; /* Ensures the button appears on top of other content */
 }
 
-/* Hover effect */
+/* Optional: Add a hover effect */
 .floating-back-button:hover {
     background-color: #ce3513;
-    color: #fff;
+    color: white;
 }
+
 
