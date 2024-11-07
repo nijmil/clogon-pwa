@@ -1,21 +1,20 @@
 /* Background image style */
 body {
-    background-image: url('https://raw.githubusercontent.com/nijmil/convention-pwa/master/assets/Keyhole.jpg'); /* Absolute URL for background image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Keeps the background in place when scrolling */
-    background-position: center; /* Centers the image */
-    color: #fff; /* Sets text color to white for readability */
+    background-image: url('https://raw.githubusercontent.com/nijmil/convention-pwa/master/assets/Keyhole.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
 }
 
 /* Logo style */
 .logo {
-    max-width: 270px; /* Adjust this to change the logo size */
-    height: auto; /* Maintains aspect ratio */
-    margin: 20px auto 85px; /* Change bottom margin to increase space below logo */
-    display: block; /* Centers the image */
+    max-width: 270px;
+    height: auto;
+    margin: 20px auto 85px;
+    display: block;
 }
-
 
 /* Container style without background */
 .container {
@@ -23,17 +22,18 @@ body {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    /* Remove background for full transparency */
-    margin-top: 100px; /* Adjust this to add more space above the entire container */
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
 }
 
 /* Button style */
 button {
-    display: block; /* Change from inline-block to block */
+    display: block;
     width: 100%;
-    max-width: 115px; /* This will still limit the width, but buttons will be on separate lines */
+    max-width: 115px;
     padding: 12px;
-    margin: 15px auto 0px; /* Adjust the bottom margin to add space below each button */
+    margin: 15px auto 0px;
     background-color: #f3d7cc;
     color: #ce3513;
     border: none;
@@ -43,7 +43,6 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 
 /* Hover effect for buttons */
 button:hover {
@@ -81,80 +80,99 @@ button:hover {
 
 /* Workshop style */
 .workshop {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 15px;
-    color: #000; /* Change text color to black for better contrast */
-    text-align: center; /* Center the text inside the workshop container */
-}
-
-.tab-button.active {
-    background-color: #f6b095; /* Example color */
-    color: #ce3513;
-    font-weight: bold;
+    color: #000;
+    text-align: center;
 }
 
 /* Info container style */
 .info-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white, same as workshop */
-    padding: 15px; /* Same padding as workshop */
-    border: 1px solid #ddd; /* Border same as workshop */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 15px; /* Space below the box */
-    color: #000; /* Text color for better contrast */
-    text-align: left; /* Left align the text inside the info container */
-}
-
-/* styles.css */
-h1 {
-    color: #ff5733; /* Change this color to your desired color */
-}
-
-/* Hover effect for both button and heading */
-button:hover, .button-style:hover {
-    background-color: #f6b095;
-}
-
-/* Header box style */
-.header-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 15px;
-    color: #ce3513; /* Same text color as buttons */
+    color: #000;
+    text-align: left;
+}
+
+/* Header box style */
+.header-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #ce3513;
     text-align: center;
     max-width: 400px;
-    margin: 0 auto 20px; /* Center the container and add spacing below */
+    margin: 0 auto 20px;
 }
-/* Reset inherited styles for the button */
+
+/* Floating Back to Home Button */
 .floating-back-button {
     all: unset;
-    position: fixed; /* Fix to the viewport */
-    right: 20px; /* 20px from the right edge */
-    bottom: 20px; /* 20px from the bottom edge */
-    padding: 10px 15px; /* Padding for the button */
-    background-color: #f3d7cc; /* Background color */
-    color: #ce3513; /* Text color */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #f3d7cc;
+    color: #ce3513;
     border: none;
-    border-radius: 50px; /* Rounded shape */
+    border-radius: 50px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1000; /* High z-index to appear above other content */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for visibility */
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     opacity: 1;
 }
 
-/* Optional: Hover effect */
 .floating-back-button:hover {
     background-color: #ce3513;
     color: white;
     transform: scale(1.05);
 }
 
+/* Feedback form styling */
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
+#feedbackForm label {
+    font-weight: bold;
+    margin-top: 10px;
+}
 
+#feedbackForm input, 
+#feedbackForm select, 
+#feedbackForm textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+#feedbackForm .submit-button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f3d7cc;
+    color: #ce3513;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#feedbackForm .submit-button:hover {
+    background-color: #f6b095;
+}
 
