@@ -129,23 +129,26 @@ button:hover, .button-style:hover {
     max-width: 400px;
     margin: 0 auto 20px; /* Center the container and add spacing below */
 }
-/* Style for the back-to-home button at the bottom of the program list */
-.back-button {
-    display: block;
-    width: 100%; /* Full-width button */
-    max-width: 115px; /* Matches other buttons */
-    margin: 20px auto; /* Centers the button and adds space above */
-    padding: 12px;
+/* Style for the floating back-to-home button */
+.floating-back-button {
+    position: fixed; /* Fixes the button position relative to the viewport */
+    bottom: 20px; /* Positions the button 20px from the bottom */
+    right: 20px; /* Positions the button 20px from the right */
+    padding: 10px 15px; /* Smaller padding */
     background-color: #f3d7cc;
     color: #ce3513;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 50px; /* Rounded button */
+    font-size: 14px; /* Smaller font size */
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease !important;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensures the button appears on top */
 }
 
-.back-button:hover {
-    background-color: #f6b095;
+/* Hover effect */
+.floating-back-button:hover {
+    background-color: #ce3513;
+    color: #fff;
 }
+
