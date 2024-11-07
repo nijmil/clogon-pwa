@@ -1,19 +1,30 @@
 /* Background image style */
 body {
-    background-image: url('https://raw.githubusercontent.com/nijmil/convention-pwa/master/assets/Keyhole.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #fff;
+    background-image: url('https://raw.githubusercontent.com/nijmil/convention-pwa/master/assets/Keyhole.jpg'); /* Absolute URL for background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background in place when scrolling */
+    background-position: center; /* Centers the image */
+    color: #fff; /* Sets text color to white for readability */
 }
 
 /* Logo style */
 .logo {
-    max-width: 270px;
-    height: auto;
-    margin: 20px auto 85px;
-    display: block;
+    max-width: 270px; /* Adjust this to change the logo size */
+    height: auto; /* Maintains aspect ratio */
+    margin: 20px auto 85px; /* Change bottom margin to increase space below logo */
+    display: block; /* Centers the image */
+}
+
+
+/* Container style without background */
+.container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Remove background for full transparency */
+    margin-top: 100px; /* Adjust this to add more space above the entire container */
 }
 
 
@@ -166,3 +177,25 @@ button:hover {
     background-color: #f6b095;
 }
 
+
+/* Feedback Button Style */
+.feedback-heading-button {
+    display: block;
+    width: 100%;
+    max-width: 250px;  /* Adjust width as needed */
+    padding: 12px;
+    margin: 20px auto 30px;
+    background-color: #f3d7cc;
+    color: #ce3513;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;   /* Larger font size to fit the heading */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.feedback-heading-button:hover {
+    background-color: #f6b095;
+}
