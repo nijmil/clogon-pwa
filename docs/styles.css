@@ -16,15 +16,6 @@ body {
     display: block;
 }
 
-/* Container style without background */
-.container {
-    text-align: center;
-    max-width: none;  /* Remove the max-width constraint */
-    margin: 0 auto;   /* Keep the container centered */
-    padding: 0;       /* Remove padding */
-    margin-top: 100px; /* Retain top margin for spacing */
-    /* Remove background-color, border-radius, etc. if you don’t want the container box */
-}
 
 /* Button style */
 button {
